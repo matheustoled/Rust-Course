@@ -1,3 +1,7 @@
 pub fn init(x: u32, y: u32, z: u32) -> Vec<u32> {
-    todo!();
+    vec![x, y, z];
+    // let mut v: Vec<u32> = Vec::new();
+    // v.push(x);
+    // v.push(y);
+    // v.push(z);
 }
