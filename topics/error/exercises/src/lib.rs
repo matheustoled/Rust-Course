@@ -1,12 +1,20 @@
 #[derive(Debug, PartialEq)]
 pub enum MathError {
     DivByZero,
+    Other,
 }
 
 pub fn div(x: u32, y: u32) -> Result<u32, MathError> {
-    todo!();
+    let q = if y != 0 {
+        Ok(x / y)
+    } else {
+        Err(MathError::DivByZero)
+    }
 }
 
 pub fn get(v: &[u32], i: usize, default_val: u32) -> u32 {
-    todo!();
+    match v.get(i) {
+        Some(x) => *x,
+        None => default_val,
+    }
 }
